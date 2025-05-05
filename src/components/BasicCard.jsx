@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './BasicCard.css';
+import profileImage from '../assets/Sangeethpic1.jpg'; // Replace with your actual image path
 
 function BasicCard() {
   const [activeTab, setActiveTab] = useState('home'); // Default to home
@@ -38,45 +39,52 @@ function BasicCard() {
   return (
     <div className="card split-card">
       <div className="card-left">
-        {/* Tabs now inside the left card, aligned right */}
         <div className="top-tabs-inside">
           <button onClick={() => setActiveTab('home')}>🏠 Home</button>
           <button onClick={() => setActiveTab('skills')}>🛠️ Skills</button>
           <button onClick={() => setActiveTab('projects')}>🚀 Projects</button>
-
         </div>
 
-        <h1>Hey,I'm Sangeeth Reddy Vanga</h1>
-        <p>I'm a passionate <strong>Frontend Developer</strong> with hands-on experience building responsive web applications using technologies like 
-        <strong> React</strong>, <strong>JavaScript</strong>, <strong> HTML</strong>, and <strong>CSS</strong>.</p>
+        <div className="intro-row">
+          <div className="profile-image-container">
+            <img src={profileImage} alt="PSV Sai Mahesh" className="profile-image" />
+          </div>
 
-        <div className="social-links">
-          <a
-            href="https://www.linkedin.com/in/your-linkedin-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="linkedin"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/your-github-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github"
-          >
-            GitHub
-          </a>
-        </div>
+          <h1>Hey, I'm Sangeeth Reddy Vanga</h1>
+          <p>
+            I'm a passionate <strong>Frontend Developer</strong> with hands-on experience building responsive web applications using technologies like
+            <strong> React</strong>, <strong> JavaScript</strong>, <strong> HTML</strong>, and <strong> CSS</strong>.
+          </p>
 
-        <div className="hero-buttons">
-          <button>Resume</button>
-          <button>Contact Me</button>
+          <div className="social-links">
+            <a
+              href="https://www.linkedin.com/in/your-linkedin-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="linkedin"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/your-github-username"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github"
+            >
+              GitHub
+            </a>
+          </div>
+
+          <div className="hero-buttons">
+            <button>Resume</button>
+            <button>Contact Me</button>
+          </div>
         </div>
       </div>
 
-      {/* Right Side: Dynamic Content */}
-      <div className="card-right">{renderContent()}</div>
+      <div className="card-right">
+        {renderContent()}
+      </div>
     </div>
   );
 }
