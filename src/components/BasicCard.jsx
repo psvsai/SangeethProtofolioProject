@@ -13,8 +13,8 @@ function BasicCard() {
           <span>JavaScript</span>
           <span>HTML</span>
           <span>CSS</span>
-          <span>Java</span>
-          <span>Spring Boot</span>
+          <span>Python</span>
+          <span> SQl</span>
         </div>
       );
     } else if (activeTab === 'projects') {
