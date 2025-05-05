@@ -1,0 +1,144 @@
+/* Container */
+.split-card {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    /* margin: px auto; */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Left Panel */
+  .card-left {
+    flex: 8;
+    background: linear-gradient(135deg, #a06bb9, #52796f);
+    color: #e2d1b1;
+    padding: 100px 60px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  /* Top-right Tabs inside intro */
+  .top-tabs-inside {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .top-tabs-inside button {
+    padding: 8px 20px;
+    background-color: #cad2c5;
+    color: #1b1b1b;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .top-tabs-inside button:hover {
+    background-color: #a3b18a;
+  }
+  
+  /* Intro Content */
+  .card-left h1 {
+    margin-top: 80px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .card-left p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  
+  /* Hero Buttons */
+  .hero-buttons {
+    margin-top: 25px;
+  }
+  
+  .hero-buttons button {
+    margin-right: 15px;
+    padding: 10px 20px;
+    background-color: #84a98c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .hero-buttons button:hover {
+    background-color: #52796f;
+  }
+  
+  /* Social Links */
+  .social-links {
+    margin-top: 30px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 16px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .social-links .linkedin {
+    background-color: #5baaaa;
+  }
+  
+  .social-links .github {
+    background-color: #080707;
+  }
+  
+  /* Right Panel */
+  .card-right {
+    flex: 2;
+    padding: 60px;
+    background-color: #44274d4f;
+    box-sizing: border-box;
+  }
+  
+  /* Skills and Projects Styling */
+  .skills-list span,
+  .projects-list p {
+    display: inline-block;
+    margin: 20px 20px 5px 0;
+    background-color: #e4cf9681;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  /* Responsive: Stack on small screens */
+  @media screen and (max-width: 768px) {
+    .split-card {
+      flex-direction: column;
+    }
+  
+    .card-left, .card-right {
+      flex: 100%;
+      padding: 40px;
+    }
+  
+    .top-tabs-inside {
+      position: relative;
+      justify-content: flex-start;
+      top: auto;
+      right: auto;
+      margin-bottom: 20px;
+    }
+  }
+  
